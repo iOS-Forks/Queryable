@@ -71,11 +71,14 @@ struct PhotoGalleryView: View {
                                         }
                                         let embedding = try await imgEncoder.computeImgEmbedding(img: resizedImage)
                                         print("Image embedding: \(embedding)")
+                                        
+                                        let closestLabel = await CloudTextModel.shared.findClosestCloudLabel(for: embedding)
+                                        print("Closest cloud label: \(closestLabel ?? "未找到匹配的标签")")
                                     } catch {
                                         print("Error encoding image: \(error)")
                                     }
                                 }
-                                viewModel.showPayAlert()
+                                //viewModel.showPayAlert()
                             } label: {
                                 imageView(for: asset)
                             }
