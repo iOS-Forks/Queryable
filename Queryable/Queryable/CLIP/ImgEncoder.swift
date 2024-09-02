@@ -12,9 +12,12 @@ import UIKit
 public struct ImgEncoder {
     var model: MLModel
     
-    init(resourcesAt baseURL: URL,
-         configuration config: MLModelConfiguration = .init()
-    ) throws {
+    init(configuration config: MLModelConfiguration = .init()) throws {
+        guard let path = Bundle.main.path(forResource: "CoreMLModels", ofType: nil, inDirectory: nil) else {
+            fatalError("Fatal error: failed to find the CoreML models.")
+        }
+        let baseURL = URL(fileURLWithPath: path)
+        
         let imgEncoderURL = baseURL.appending(path:"ImageEncoder_mobileCLIP_s2.mlmodelc")
         let imgEncoderModel = try MLModel(contentsOf: imgEncoderURL, configuration: config)
         self.model = imgEncoderModel

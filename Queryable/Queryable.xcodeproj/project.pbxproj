@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1D632A5F95300004C06F /* CoreMLModels */; };
+		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
 		94E9174B2A5A45C000324937 /* QueryableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9174A2A5A45C000324937 /* QueryableApp.swift */; };
 		94E917522A5A45C200324937 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E917512A5A45C200324937 /* Preview Assets.xcassets */; };
 		94E917B12A5A475B00324937 /* TextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9178D2A5A475B00324937 /* TextEncoder.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		4D3B1D632A5F95300004C06F /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
+		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
 		94E917472A5A45C000324937 /* Queryable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Queryable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E9174A2A5A45C000324937 /* QueryableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryableApp.swift; sourceTree = "<group>"; };
 		94E917512A5A45C200324937 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -136,12 +138,12 @@
 		94E9173E2A5A45C000324937 = {
 			isa = PBXGroup;
 			children = (
+				94E917492A5A45C000324937 /* Queryable */,
 				94E917D02A5A47A300324937 /* de.lproj */,
 				94E917CD2A5A47A300324937 /* en.lproj */,
 				94E917D92A5A47A300324937 /* es.lproj */,
 				94E917D32A5A47A300324937 /* fr.lproj */,
 				94E917D62A5A47A300324937 /* it.lproj */,
-				94E917492A5A45C000324937 /* Queryable */,
 				94E917482A5A45C000324937 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -183,6 +185,7 @@
 		94E9178C2A5A475B00324937 /* CLIP */ = {
 			isa = PBXGroup;
 			children = (
+				843B78922C85AB34009E630F /* CLIPHelper.swift */,
 				94E9178D2A5A475B00324937 /* TextEncoder.swift */,
 				94E9178E2A5A475B00324937 /* ImgEncoder.swift */,
 				94E9178F2A5A475B00324937 /* Tokenizer */,
@@ -467,6 +470,7 @@
 				94E917B72A5A475B00324937 /* PhotoSearchModel.swift in Sources */,
 				94E917B92A5A475B00324937 /* PhotoAssetCollection.swift in Sources */,
 				94E917B22A5A475B00324937 /* ImgEncoder.swift in Sources */,
+				843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */,
 				94E917B52A5A475B00324937 /* Embedding.swift in Sources */,
 				94E917BD2A5A475B00324937 /* PhotoLibrary.swift in Sources */,
 				94E917C92A5A475B00324937 /* ConfigView.swift in Sources */,
@@ -684,7 +688,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Queryable/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RH9H7T7RBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to all your photos for offline search.";
@@ -715,7 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Queryable/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = RH9H7T7RBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to all your photos for offline search.";

@@ -156,7 +156,7 @@ class PhotoSearcher: ObservableObject {
         
         do {
             let startingTime = Date()
-            let imgEncoder = try ImgEncoder(resourcesAt: resourceURL)
+            let imgEncoder = try ImgEncoder()
             // 8.542439937591553 seconds used for loading img encoder
             print("\(startingTime.timeIntervalSinceNow * -1) seconds used for loading img encoder")
             self.imageEncoder = imgEncoder

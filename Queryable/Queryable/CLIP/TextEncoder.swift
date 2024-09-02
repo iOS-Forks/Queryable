@@ -17,9 +17,13 @@ public struct TextEncoder {
     /// Embedding model
     var model: MLModel
     
-    init(resourcesAt baseURL: URL,
-         configuration config: MLModelConfiguration = .init()
-    ) throws {
+    init(configuration config: MLModelConfiguration = .init()) throws {
+        
+        guard let path = Bundle.main.path(forResource: "CoreMLModels", ofType: nil, inDirectory: nil) else {
+            fatalError("Fatal error: failed to find the CoreML models.")
+        }
+        let baseURL = URL(fileURLWithPath: path)
+
         let textEncoderURL = baseURL.appending(path: "TextEncoder_mobileCLIP_s2.mlmodelc")
         let vocabURL = baseURL.appending(path: "vocab.json")
         let mergesURL = baseURL.appending(path: "merges.txt")
