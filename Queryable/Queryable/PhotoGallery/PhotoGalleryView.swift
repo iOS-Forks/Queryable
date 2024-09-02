@@ -74,6 +74,9 @@ struct PhotoGalleryView: View {
                                         
                                         let closestLabel = await CloudTextModel.shared.findClosestCloudLabel(for: embedding)
                                         print("Closest cloud label: \(closestLabel ?? "未找到匹配的标签")")
+                                        
+                                        let hasCloudInPic = await CloudTextModel.shared.hasCloud(in: embedding)
+                                        print("hasCloud: \(hasCloudInPic)")
                                     } catch {
                                         print("Error encoding image: \(error)")
                                     }

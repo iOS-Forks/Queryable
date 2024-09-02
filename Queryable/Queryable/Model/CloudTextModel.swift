@@ -12,17 +12,38 @@ class CloudTextModel {
     static let shared = CloudTextModel()
 
     private var encodedLabels: [MLShapedArray<Float32>] = []
+    private var cloud_encodeds_encoded: [MLShapedArray<Float32>] = []
     
     private init() {
-        var encodedLabels: [MLShapedArray<Float32>] = []
         let textEncoder = try! TextEncoder()
         
         for label in cloud_labels_0 {
             let embedding = try! textEncoder.computeTextEmbedding(prompt: label)
-            encodedLabels.append(embedding)
+            self.encodedLabels.append(embedding)
         }
         
-        self.encodedLabels = encodedLabels
+
+        for cloud_encoded in cloud_encodeds {
+            let embedding = try! textEncoder.computeTextEmbedding(prompt: cloud_encoded)
+            cloud_encodeds_encoded.append(embedding)
+        }
+    }
+
+    private let cloud_encodeds = [
+        "cloud",
+        "clouds",
+        "sky"
+    ]
+
+    func hasCloud(in embedding: MLShapedArray<Float32>) async -> Bool {
+        for cloudEmbedding in cloud_encodeds_encoded {
+            let similarity = await CLIPHelper.shared.cosine_similarity(A: embedding, B: cloudEmbedding)
+            print("================ similarity: \(similarity)")
+            if similarity > 0.2 { // 设定一个相似度阈值
+                return true
+            }
+        }
+        return false
     }
 
     private let cloud_labels_0 = [
