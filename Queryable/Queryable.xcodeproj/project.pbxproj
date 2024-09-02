@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1D632A5F95300004C06F /* CoreMLModels */; };
 		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
+		849E57B12C85BA1B00D35A9D /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */; };
+		849E57B22C85BA1B00D35A9D /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */; };
+		849E57B52C85BC4000D35A9D /* CommonLibs in Frameworks */ = {isa = PBXBuildFile; productRef = 849E57B42C85BC4000D35A9D /* CommonLibs */; };
+		849E57B92C85BCFF00D35A9D /* RotationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57B82C85BCFF00D35A9D /* RotationState.swift */; };
+		849E57BC2C85BD8300D35A9D /* PayLibs in Frameworks */ = {isa = PBXBuildFile; productRef = 849E57BB2C85BD8300D35A9D /* PayLibs */; };
+		849E57BF2C85BE0900D35A9D /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = 849E57BE2C85BE0900D35A9D /* SwiftUIViews */; };
 		94E9174B2A5A45C000324937 /* QueryableApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9174A2A5A45C000324937 /* QueryableApp.swift */; };
 		94E917522A5A45C200324937 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E917512A5A45C200324937 /* Preview Assets.xcassets */; };
 		94E917B12A5A475B00324937 /* TextEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9178D2A5A475B00324937 /* TextEncoder.swift */; };
@@ -68,6 +74,9 @@
 /* Begin PBXFileReference section */
 		4D3B1D632A5F95300004C06F /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
 		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
+		849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
+		849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
+		849E57B82C85BCFF00D35A9D /* RotationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationState.swift; sourceTree = "<group>"; };
 		94E917472A5A45C000324937 /* Queryable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Queryable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E9174A2A5A45C000324937 /* QueryableApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryableApp.swift; sourceTree = "<group>"; };
 		94E917512A5A45C200324937 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -115,6 +124,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849E57B52C85BC4000D35A9D /* CommonLibs in Frameworks */,
+				849E57BC2C85BD8300D35A9D /* PayLibs in Frameworks */,
+				849E57BF2C85BE0900D35A9D /* SwiftUIViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +155,16 @@
 			path = Ext;
 			sourceTree = "<group>";
 		};
+		849E57AE2C85BA0600D35A9D /* PhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+				849E57B82C85BCFF00D35A9D /* RotationState.swift */,
+				849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */,
+				849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */,
+			);
+			path = PhotoGallery;
+			sourceTree = "<group>";
+		};
 		94E9173E2A5A45C000324937 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +191,7 @@
 		94E917492A5A45C000324937 /* Queryable */ = {
 			isa = PBXGroup;
 			children = (
+				849E57AE2C85BA0600D35A9D /* PhotoGallery */,
 				849E57AD2C85B88400D35A9D /* Ext */,
 				4D3B1D632A5F95300004C06F /* CoreMLModels */,
 				94E9178C2A5A475B00324937 /* CLIP */,
@@ -343,6 +366,11 @@
 			dependencies = (
 			);
 			name = Queryable;
+			packageProductDependencies = (
+				849E57B42C85BC4000D35A9D /* CommonLibs */,
+				849E57BB2C85BD8300D35A9D /* PayLibs */,
+				849E57BE2C85BE0900D35A9D /* SwiftUIViews */,
+			);
 			productName = Queryable;
 			productReference = 94E917472A5A45C000324937 /* Queryable.app */;
 			productType = "com.apple.product-type.application";
@@ -419,6 +447,11 @@
 				es,
 			);
 			mainGroup = 94E9173E2A5A45C000324937;
+			packageReferences = (
+				849E57B32C85BC4000D35A9D /* XCRemoteSwiftPackageReference "CommonLibs" */,
+				849E57BA2C85BD8300D35A9D /* XCRemoteSwiftPackageReference "paylibs" */,
+				849E57BD2C85BE0900D35A9D /* XCRemoteSwiftPackageReference "SwiftUIViews" */,
+			);
 			productRefGroup = 94E917482A5A45C000324937 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -473,9 +506,11 @@
 				94E917BE2A5A475B00324937 /* BuildIndexView.swift in Sources */,
 				94E917C02A5A475B00324937 /* PhotoView.swift in Sources */,
 				94E917CC2A5A475B00324937 /* PhotoSearcher.swift in Sources */,
+				849E57B12C85BA1B00D35A9D /* PhotoGalleryView.swift in Sources */,
 				94E917C72A5A475B00324937 /* SearchBarView.swift in Sources */,
 				94E917BB2A5A475B00324937 /* PhotoCollection.swift in Sources */,
 				94E917B72A5A475B00324937 /* PhotoSearchModel.swift in Sources */,
+				849E57B22C85BA1B00D35A9D /* PhotoGalleryViewModel.swift in Sources */,
 				94E917B92A5A475B00324937 /* PhotoAssetCollection.swift in Sources */,
 				94E917B22A5A475B00324937 /* ImgEncoder.swift in Sources */,
 				843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */,
@@ -490,6 +525,7 @@
 				94E917C82A5A475B00324937 /* SearchResultsView.swift in Sources */,
 				94E917C42A5A475B00324937 /* PhotoViewForMac.swift in Sources */,
 				94E917B32A5A475B00324937 /* BPETokenizer.swift in Sources */,
+				849E57B92C85BCFF00D35A9D /* RotationState.swift in Sources */,
 				DE4D625A2AECD3CF007AB439 /* FeedbackItemView.swift in Sources */,
 				94E917B12A5A475B00324937 /* TextEncoder.swift in Sources */,
 				94E9174B2A5A45C000324937 /* QueryableApp.swift in Sources */,
@@ -866,6 +902,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		849E57B32C85BC4000D35A9D /* XCRemoteSwiftPackageReference "CommonLibs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andforce/CommonLibs";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		849E57BA2C85BD8300D35A9D /* XCRemoteSwiftPackageReference "paylibs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andforce/paylibs";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		849E57BD2C85BE0900D35A9D /* XCRemoteSwiftPackageReference "SwiftUIViews" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/andforce/SwiftUIViews";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		849E57B42C85BC4000D35A9D /* CommonLibs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849E57B32C85BC4000D35A9D /* XCRemoteSwiftPackageReference "CommonLibs" */;
+			productName = CommonLibs;
+		};
+		849E57BB2C85BD8300D35A9D /* PayLibs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849E57BA2C85BD8300D35A9D /* XCRemoteSwiftPackageReference "paylibs" */;
+			productName = PayLibs;
+		};
+		849E57BE2C85BE0900D35A9D /* SwiftUIViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849E57BD2C85BE0900D35A9D /* XCRemoteSwiftPackageReference "SwiftUIViews" */;
+			productName = SwiftUIViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 94E9173F2A5A45C000324937 /* Project object */;
 }
