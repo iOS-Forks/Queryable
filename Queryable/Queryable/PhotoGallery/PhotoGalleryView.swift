@@ -61,6 +61,16 @@ struct PhotoGalleryView: View {
 //                                }
 //                            }
                             Button {
+                                Task {
+                                    do {
+                                        let imgEncoder = try ImgEncoder()
+                                        let image = viewModel.assetImageDic[asset] ?? UIImage()
+                                        let embedding = try await imgEncoder.computeImgEmbedding(img: image)
+                                        print("Image embedding: \(embedding)")
+                                    } catch {
+                                        print("Error encoding image: \(error)")
+                                    }
+                                }
                                 viewModel.showPayAlert()
                             } label: {
                                 imageView(for: asset)
