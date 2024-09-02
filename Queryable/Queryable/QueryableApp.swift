@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct QueryableApp: App {
+    
+    @StateObject var rotationState = RotationState()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            //MainView()
+            PhotoGalleryView()
+                .environmentObject(rotationState)
         }
     }
 }

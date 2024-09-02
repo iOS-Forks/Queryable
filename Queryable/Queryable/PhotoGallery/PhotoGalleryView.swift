@@ -35,30 +35,35 @@ struct PhotoGalleryView: View {
                 ScrollView {
                     LazyVGrid(columns: self.columes(), spacing: 2) {
                         ForEach(viewModel.phAssets, id: \.self) { asset in
-                            if viewModel.isLinkActive {
-                                NavigationLink {
-                                    TableViewControllerView(data: asset)
-                                        .navigationTitle("诗句")
-                                        .edgesIgnoringSafeArea(.all)
-                                } label: {
-                                    imageView(for: asset)
-                                }
-                                .simultaneousGesture(
-                                    TapGesture().onEnded {
-                                        if viewModel.isLimit() {
-                                            viewModel.showPayAlert()
-                                        } else {
-                                            viewModel.goLink()
-                                        }
-                                        CountChecker.shared.updateTodayCount()
-                                    }
-                                )
-                            } else {
-                                Button {
-                                    viewModel.showPayAlert()
-                                } label: {
-                                    imageView(for: asset)
-                                }
+//                            if viewModel.isLinkActive {
+//                                NavigationLink {
+//                                    TableViewControllerView(data: asset)
+//                                        .navigationTitle("诗句")
+//                                        .edgesIgnoringSafeArea(.all)
+//                                } label: {
+//                                    imageView(for: asset)
+//                                }
+//                                .simultaneousGesture(
+//                                    TapGesture().onEnded {
+//                                        if viewModel.isLimit() {
+//                                            viewModel.showPayAlert()
+//                                        } else {
+//                                            viewModel.goLink()
+//                                        }
+//                                        //CountChecker.shared.updateTodayCount()
+//                                    }
+//                                )
+//                            } else {
+//                                Button {
+//                                    viewModel.showPayAlert()
+//                                } label: {
+//                                    imageView(for: asset)
+//                                }
+//                            }
+                            Button {
+                                viewModel.showPayAlert()
+                            } label: {
+                                imageView(for: asset)
                             }
                         }
                     }

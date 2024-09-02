@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1D632A5F95300004C06F /* CoreMLModels */; };
 		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
+		846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334C2C85C0C4006894FC /* PayManager+Poem.swift */; };
+		846C33562C85C0C4006894FC /* PayProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334D2C85C0C4006894FC /* PayProduct.swift */; };
+		846C33572C85C0C4006894FC /* PayRestoreBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334E2C85C0C4006894FC /* PayRestoreBtnView.swift */; };
+		846C33582C85C0C4006894FC /* PayUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334F2C85C0C4006894FC /* PayUI.swift */; };
+		846C33592C85C0C4006894FC /* ProductIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33502C85C0C4006894FC /* ProductIds.swift */; };
+		846C335A2C85C0C4006894FC /* pay_productids.json in Resources */ = {isa = PBXBuildFile; fileRef = 846C33512C85C0C4006894FC /* pay_productids.json */; };
+		846C335B2C85C0C4006894FC /* PayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33522C85C0C4006894FC /* PayModel.swift */; };
+		846C335C2C85C0C4006894FC /* PayProductHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33532C85C0C4006894FC /* PayProductHelper.swift */; };
+		846C335D2C85C0C4006894FC /* PayItemButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33542C85C0C4006894FC /* PayItemButtonView.swift */; };
+		846C335F2C85C103006894FC /* CountChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C335E2C85C103006894FC /* CountChecker.swift */; };
+		846C33612C85C1CF006894FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33602C85C1CF006894FC /* MainView.swift */; };
 		849E57B12C85BA1B00D35A9D /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */; };
 		849E57B22C85BA1B00D35A9D /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */; };
 		849E57B52C85BC4000D35A9D /* CommonLibs in Frameworks */ = {isa = PBXBuildFile; productRef = 849E57B42C85BC4000D35A9D /* CommonLibs */; };
@@ -74,6 +85,17 @@
 /* Begin PBXFileReference section */
 		4D3B1D632A5F95300004C06F /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
 		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
+		846C334C2C85C0C4006894FC /* PayManager+Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayManager+Poem.swift"; sourceTree = "<group>"; };
+		846C334D2C85C0C4006894FC /* PayProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayProduct.swift; sourceTree = "<group>"; };
+		846C334E2C85C0C4006894FC /* PayRestoreBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayRestoreBtnView.swift; sourceTree = "<group>"; };
+		846C334F2C85C0C4006894FC /* PayUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayUI.swift; sourceTree = "<group>"; };
+		846C33502C85C0C4006894FC /* ProductIds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductIds.swift; sourceTree = "<group>"; };
+		846C33512C85C0C4006894FC /* pay_productids.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pay_productids.json; sourceTree = "<group>"; };
+		846C33522C85C0C4006894FC /* PayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayModel.swift; sourceTree = "<group>"; };
+		846C33532C85C0C4006894FC /* PayProductHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayProductHelper.swift; sourceTree = "<group>"; };
+		846C33542C85C0C4006894FC /* PayItemButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayItemButtonView.swift; sourceTree = "<group>"; };
+		846C335E2C85C103006894FC /* CountChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountChecker.swift; sourceTree = "<group>"; };
+		846C33602C85C1CF006894FC /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		849E57B82C85BCFF00D35A9D /* RotationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationState.swift; sourceTree = "<group>"; };
@@ -147,6 +169,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846C334B2C85C0B8006894FC /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				846C33512C85C0C4006894FC /* pay_productids.json */,
+				846C33542C85C0C4006894FC /* PayItemButtonView.swift */,
+				846C334C2C85C0C4006894FC /* PayManager+Poem.swift */,
+				846C33522C85C0C4006894FC /* PayModel.swift */,
+				846C334D2C85C0C4006894FC /* PayProduct.swift */,
+				846C33532C85C0C4006894FC /* PayProductHelper.swift */,
+				846C334E2C85C0C4006894FC /* PayRestoreBtnView.swift */,
+				846C334F2C85C0C4006894FC /* PayUI.swift */,
+				846C33502C85C0C4006894FC /* ProductIds.swift */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 		849E57AD2C85B88400D35A9D /* Ext */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +229,9 @@
 		94E917492A5A45C000324937 /* Queryable */ = {
 			isa = PBXGroup;
 			children = (
+				846C33602C85C1CF006894FC /* MainView.swift */,
+				846C335E2C85C103006894FC /* CountChecker.swift */,
+				846C334B2C85C0B8006894FC /* Pay */,
 				849E57AE2C85BA0600D35A9D /* PhotoGallery */,
 				849E57AD2C85B88400D35A9D /* Ext */,
 				4D3B1D632A5F95300004C06F /* CoreMLModels */,
@@ -468,6 +509,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846C335A2C85C0C4006894FC /* pay_productids.json in Resources */,
 				94E917DE2A5A47A300324937 /* Localizable.strings in Resources */,
 				94E917DF2A5A47A300324937 /* Localizable.strings in Resources */,
 				4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */,
@@ -500,16 +542,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846C33592C85C0C4006894FC /* ProductIds.swift in Sources */,
 				94E917B42A5A475B00324937 /* BPETokenizer+Reading.swift in Sources */,
 				94E917C22A5A475B00324937 /* PhotoCollectionView.swift in Sources */,
 				94E917BA2A5A475B00324937 /* CachedImageManager.swift in Sources */,
 				94E917BE2A5A475B00324937 /* BuildIndexView.swift in Sources */,
 				94E917C02A5A475B00324937 /* PhotoView.swift in Sources */,
 				94E917CC2A5A475B00324937 /* PhotoSearcher.swift in Sources */,
+				846C33582C85C0C4006894FC /* PayUI.swift in Sources */,
 				849E57B12C85BA1B00D35A9D /* PhotoGalleryView.swift in Sources */,
+				846C335C2C85C0C4006894FC /* PayProductHelper.swift in Sources */,
 				94E917C72A5A475B00324937 /* SearchBarView.swift in Sources */,
 				94E917BB2A5A475B00324937 /* PhotoCollection.swift in Sources */,
+				846C335D2C85C0C4006894FC /* PayItemButtonView.swift in Sources */,
 				94E917B72A5A475B00324937 /* PhotoSearchModel.swift in Sources */,
+				846C335F2C85C103006894FC /* CountChecker.swift in Sources */,
+				846C335B2C85C0C4006894FC /* PayModel.swift in Sources */,
+				846C33562C85C0C4006894FC /* PayProduct.swift in Sources */,
 				849E57B22C85BA1B00D35A9D /* PhotoGalleryViewModel.swift in Sources */,
 				94E917B92A5A475B00324937 /* PhotoAssetCollection.swift in Sources */,
 				94E917B22A5A475B00324937 /* ImgEncoder.swift in Sources */,
@@ -522,10 +571,13 @@
 				94E917BC2A5A475B00324937 /* PhotoAsset.swift in Sources */,
 				94E917B62A5A475B00324937 /* UIImage+Extension.swift in Sources */,
 				94E917B82A5A475B00324937 /* DataModel.swift in Sources */,
+				846C33612C85C1CF006894FC /* MainView.swift in Sources */,
 				94E917C82A5A475B00324937 /* SearchResultsView.swift in Sources */,
+				846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */,
 				94E917C42A5A475B00324937 /* PhotoViewForMac.swift in Sources */,
 				94E917B32A5A475B00324937 /* BPETokenizer.swift in Sources */,
 				849E57B92C85BCFF00D35A9D /* RotationState.swift in Sources */,
+				846C33572C85C0C4006894FC /* PayRestoreBtnView.swift in Sources */,
 				DE4D625A2AECD3CF007AB439 /* FeedbackItemView.swift in Sources */,
 				94E917B12A5A475B00324937 /* TextEncoder.swift in Sources */,
 				94E9174B2A5A45C000324937 /* QueryableApp.swift in Sources */,

@@ -1,0 +1,26 @@
+[
+    {
+        "productId":"poem_one_year",
+        "name":"按年订阅",
+        "price":12.00,
+        "originPrice":28.00,
+        "des":"一年内尽享所有功能，可随时取消",
+        "isSubscription":true,
+        "needCheckTime":false,
+        "needCheckTimeDayCount":0,
+        "password":"c5b40fc500dd40a1a517ebdf64d8518b",
+        "notice":"订阅费用将通过您的iTunes账户进行支付，您的订阅将自动续期，除非在当前期限结束前至少24小时取消，购买后可在账户设置中管理订阅。"
+    },
+    {
+        "productId":"ai_poem_vip",
+        "name":"一次性买断",
+        "price":28.00,
+        "originPrice":58.00,
+        "des":"一次购买，终身可用",
+        "isSubscription":false,
+        "needCheckTime":false,
+        "needCheckTimeDayCount":0,
+        "password":"",
+        "notice":"一次性收取购买费用，不会按周期收费。更换手机或者卸载重装，只需点击恢复按钮即可，无需重新购买。"
+    }
+]
