@@ -65,7 +65,11 @@ struct PhotoGalleryView: View {
                                     do {
                                         let imgEncoder = try ImgEncoder()
                                         let image = viewModel.assetImageDic[asset] ?? UIImage()
-                                        let embedding = try await imgEncoder.computeImgEmbedding(img: image)
+                                        guard let resizedImage = try image.resizeImageTo(size: CGSize(width: 256, height: 256)) else {
+                                            print("Failed to resize image")
+                                            return
+                                        }
+                                        let embedding = try await imgEncoder.computeImgEmbedding(img: resizedImage)
                                         print("Image embedding: \(embedding)")
                                     } catch {
                                         print("Error encoding image: \(error)")
