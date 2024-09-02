@@ -64,7 +64,7 @@ struct PhotoGalleryView: View {
                                 Task {
                                     do {
                                         let imgEncoder = try ImgEncoder()
-                                        let image = viewModel.assetImageDic[asset] ?? UIImage()
+                                        let image = viewModel.assetImageDic[asset]?.cropImageForCLIP() ?? UIImage()
                                         guard let resizedImage = try image.resizeImageTo(size: CGSize(width: 256, height: 256)) else {
                                             print("Failed to resize image")
                                             return

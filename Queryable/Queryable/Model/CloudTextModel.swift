@@ -32,7 +32,9 @@ class CloudTextModel {
     private let cloud_encodeds = [
         "cloud",
         "clouds",
-        "sky"
+        "sky",
+        "fog",
+        "mist"
     ]
 
     func hasCloud(in embedding: MLShapedArray<Float32>) async -> Bool {

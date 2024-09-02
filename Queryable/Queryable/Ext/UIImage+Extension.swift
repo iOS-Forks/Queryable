@@ -18,7 +18,18 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return resizedImage
     }
-    
+    func cropImageForCLIP() -> UIImage? {
+        let cropHeight = self.size.height * 2 / 3
+        let cropWidth = self.size.width * 2 / 3
+        let cropX = (self.size.width - cropWidth) / 2
+        let cropRect = CGRect(x: cropX, y: 0, width: cropWidth, height: cropHeight)
+        
+        guard let cgImage = self.cgImage?.cropping(to: cropRect) else {
+            return nil
+        }
+        
+        return UIImage(cgImage: cgImage)
+    }
      func convertToBuffer() -> CVPixelBuffer? {
         
         let attributes = [
