@@ -135,6 +135,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		849E57AD2C85B88400D35A9D /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				94E917942A5A475B00324937 /* UIImage+Extension.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
 		94E9173E2A5A45C000324937 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +169,7 @@
 		94E917492A5A45C000324937 /* Queryable */ = {
 			isa = PBXGroup;
 			children = (
+				849E57AD2C85B88400D35A9D /* Ext */,
 				4D3B1D632A5F95300004C06F /* CoreMLModels */,
 				94E9178C2A5A475B00324937 /* CLIP */,
 				94E917922A5A475B00324937 /* Model */,
@@ -206,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				94E917932A5A475B00324937 /* Embedding.swift */,
-				94E917942A5A475B00324937 /* UIImage+Extension.swift */,
 				94E917952A5A475B00324937 /* PhotoSearchModel.swift */,
 			);
 			path = Model;
