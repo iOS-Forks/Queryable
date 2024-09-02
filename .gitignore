@@ -22,3 +22,6 @@ fastlane/Preview.html
 
 Queryable/Queryable.xcodeproj/project.xcworkspace/xcuserdata/
 Queryable/Queryable.xcodeproj/xcuserdata/
+
+Queryable/Queryable/CoreMLModels/ImageEncoder_mobileCLIP_s2.mlmodelc/*
+Queryable/Queryable/CoreMLModels/TextEncoder_mobileCLIP_s2.mlmodelc/*
