@@ -29,9 +29,7 @@ struct PhotoSearcherModel {
     }
     
     func cosine_similarity(A: MLShapedArray<Float32>, B: MLShapedArray<Float32>) async -> Float {
-        let magnitude = vDSP.sumOfSquares(A.scalars).squareRoot() * vDSP.sumOfSquares(B.scalars).squareRoot()
-        let dotarray = vDSP.dot(A.scalars, B.scalars)
-        return  dotarray / magnitude
+        return await CLIPHelper.shared.cosine_similarity(A: A, B: B)
     }
     
     func spherical_dist_loss(A: MLShapedArray<Float32>, B: MLShapedArray<Float32>) async -> Float {
