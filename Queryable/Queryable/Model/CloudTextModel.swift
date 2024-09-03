@@ -31,7 +31,7 @@ class CloudTextModel {
 
     private let cloud_encodeds = [
         "cloud",
-        "clouds",
+        "clouds", 
         "sky",
         "fog",
         "mist"
