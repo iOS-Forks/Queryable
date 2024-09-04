@@ -18,6 +18,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return resizedImage
     }
+    
     func cropImageForCLIP() -> UIImage? {
         let cropHeight = self.size.height * 2 / 3
         let cropWidth = self.size.width * 2 / 3

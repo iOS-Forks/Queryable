@@ -15,6 +15,8 @@ struct PhotoGalleryView: View {
     
     @ObservedObject var viewModel = PhotoGalleryViewModel.shared
     
+    @ObservedObject var cloudViewModel = CloudViewModel.shared
+    
     @ObservedObject var payViewModel = PayModel.shared
     
     @EnvironmentObject var rotationState: RotationState
@@ -35,53 +37,14 @@ struct PhotoGalleryView: View {
                 ScrollView {
                     LazyVGrid(columns: self.columes(), spacing: 2) {
                         ForEach(viewModel.phAssets, id: \.self) { asset in
-//                            if viewModel.isLinkActive {
-//                                NavigationLink {
-//                                    TableViewControllerView(data: asset)
-//                                        .navigationTitle("诗句")
-//                                        .edgesIgnoringSafeArea(.all)
-//                                } label: {
-//                                    imageView(for: asset)
-//                                }
-//                                .simultaneousGesture(
-//                                    TapGesture().onEnded {
-//                                        if viewModel.isLimit() {
-//                                            viewModel.showPayAlert()
-//                                        } else {
-//                                            viewModel.goLink()
-//                                        }
-//                                        //CountChecker.shared.updateTodayCount()
-//                                    }
-//                                )
-//                            } else {
-//                                Button {
-//                                    viewModel.showPayAlert()
-//                                } label: {
-//                                    imageView(for: asset)
-//                                }
-//                            }
+
                             Button {
-                                Task {
-                                    do {
-                                        let imgEncoder = try ImgEncoder()
-                                        let image = viewModel.assetImageDic[asset]?.cropImageForCLIP() ?? UIImage()
-                                        guard let resizedImage = try image.resizeImageTo(size: CGSize(width: 256, height: 256)) else {
-                                            print("Failed to resize image")
-                                            return
-                                        }
-                                        let embedding = try await imgEncoder.computeImgEmbedding(img: resizedImage)
-                                        print("Image embedding: \(embedding)")
-                                        
-                                        let closestLabel = await CloudTextModel.shared.findClosestCloudLabel(for: embedding)
-                                        print("Closest cloud label: \(closestLabel ?? "未找到匹配的标签")")
-                                        
-                                        let hasCloudInPic = await CloudTextModel.shared.hasCloud(in: embedding)
-                                        print("hasCloud: \(hasCloudInPic)")
-                                    } catch {
-                                        print("Error encoding image: \(error)")
-                                    }
+
+                                guard let image = viewModel.assetImageDic[asset] else {
+                                    return
                                 }
-                                //viewModel.showPayAlert()
+                                
+                                cloudViewModel.checkCloudSpecie(image: image)
                             } label: {
                                 imageView(for: asset)
                             }

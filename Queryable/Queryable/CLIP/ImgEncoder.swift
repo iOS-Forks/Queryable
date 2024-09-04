@@ -23,8 +23,8 @@ public struct ImgEncoder {
         self.model = imgEncoderModel
     }
     
-    public func computeImgEmbedding(img: UIImage) async throws -> MLShapedArray<Float32> {
-        let imgEmbedding = try await self.encode(image: img)
+    public func computeImgEmbedding(img: UIImage) async -> MLShapedArray<Float32>? {
+        let imgEmbedding = await self.encode(image: img)
         return imgEmbedding
     }
     
@@ -35,7 +35,7 @@ public struct ImgEncoder {
     /// Prediction queue
     let queue = DispatchQueue(label: "imgencoder.predict")
     
-    private func encode(image: UIImage) async throws -> MLShapedArray<Float32> {
+    private func encode(image: UIImage) async -> MLShapedArray<Float32>? {
         do {
             guard let resizedImage = try image.resizeImageTo(size:CGSize(width: 256, height: 256)) else {
                 throw ImageEncodingError.resizeError
@@ -58,7 +58,7 @@ public struct ImgEncoder {
             return MLShapedArray<Float32>(converting: multiArray)
         } catch {
             print("Error in encoding: \(error)")
-            throw error
+            return nil
         }
     }
 }

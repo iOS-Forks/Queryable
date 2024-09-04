@@ -8,8 +8,8 @@
 import Foundation
 import CoreML
 
-class CloudTextModel {
-    static let shared = CloudTextModel()
+class CloudTextHelper {
+    static let shared = CloudTextHelper()
 
     private var encodedLabels: [MLShapedArray<Float32>] = []
     private var cloud_encodeds_encoded: [MLShapedArray<Float32>] = []
@@ -41,7 +41,7 @@ class CloudTextModel {
         for cloudEmbedding in cloud_encodeds_encoded {
             let similarity = await CLIPHelper.shared.cosine_similarity(A: embedding, B: cloudEmbedding)
             print("================ similarity: \(similarity)")
-            if similarity > 0.2 { // 设定一个相似度阈值
+            if similarity >= 0.2 { // 设定一个相似度阈值
                 return true
             }
         }

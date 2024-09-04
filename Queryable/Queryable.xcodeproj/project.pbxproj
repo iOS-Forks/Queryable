@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */ = {isa = PBXBuildFile; fileRef = 4D3B1D632A5F95300004C06F /* CoreMLModels */; };
 		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
+		84419ACE2C88801600A5817F /* CloudViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84419ACD2C88801600A5817F /* CloudViewModel.swift */; };
 		846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334C2C85C0C4006894FC /* PayManager+Poem.swift */; };
 		846C33562C85C0C4006894FC /* PayProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334D2C85C0C4006894FC /* PayProduct.swift */; };
 		846C33572C85C0C4006894FC /* PayRestoreBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334E2C85C0C4006894FC /* PayRestoreBtnView.swift */; };
@@ -20,7 +21,7 @@
 		846C335D2C85C0C4006894FC /* PayItemButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33542C85C0C4006894FC /* PayItemButtonView.swift */; };
 		846C335F2C85C103006894FC /* CountChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C335E2C85C103006894FC /* CountChecker.swift */; };
 		846C33612C85C1CF006894FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33602C85C1CF006894FC /* MainView.swift */; };
-		846C33632C85EC60006894FC /* CloudTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33622C85EC60006894FC /* CloudTextModel.swift */; };
+		846C33632C85EC60006894FC /* CloudTextHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C33622C85EC60006894FC /* CloudTextHelper.swift */; };
 		849E57B12C85BA1B00D35A9D /* PhotoGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */; };
 		849E57B22C85BA1B00D35A9D /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */; };
 		849E57B52C85BC4000D35A9D /* CommonLibs in Frameworks */ = {isa = PBXBuildFile; productRef = 849E57B42C85BC4000D35A9D /* CommonLibs */; };
@@ -86,6 +87,7 @@
 /* Begin PBXFileReference section */
 		4D3B1D632A5F95300004C06F /* CoreMLModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CoreMLModels; sourceTree = "<group>"; };
 		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
+		84419ACD2C88801600A5817F /* CloudViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewModel.swift; sourceTree = "<group>"; };
 		846C334C2C85C0C4006894FC /* PayManager+Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayManager+Poem.swift"; sourceTree = "<group>"; };
 		846C334D2C85C0C4006894FC /* PayProduct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayProduct.swift; sourceTree = "<group>"; };
 		846C334E2C85C0C4006894FC /* PayRestoreBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayRestoreBtnView.swift; sourceTree = "<group>"; };
@@ -97,7 +99,7 @@
 		846C33542C85C0C4006894FC /* PayItemButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayItemButtonView.swift; sourceTree = "<group>"; };
 		846C335E2C85C103006894FC /* CountChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountChecker.swift; sourceTree = "<group>"; };
 		846C33602C85C1CF006894FC /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		846C33622C85EC60006894FC /* CloudTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTextModel.swift; sourceTree = "<group>"; };
+		846C33622C85EC60006894FC /* CloudTextHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTextHelper.swift; sourceTree = "<group>"; };
 		849E57AF2C85BA1B00D35A9D /* PhotoGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryView.swift; sourceTree = "<group>"; };
 		849E57B02C85BA1B00D35A9D /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		849E57B82C85BCFF00D35A9D /* RotationState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotationState.swift; sourceTree = "<group>"; };
@@ -282,7 +284,7 @@
 			children = (
 				94E917932A5A475B00324937 /* Embedding.swift */,
 				94E917952A5A475B00324937 /* PhotoSearchModel.swift */,
-				846C33622C85EC60006894FC /* CloudTextModel.swift */,
+				846C33622C85EC60006894FC /* CloudTextHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +351,7 @@
 		94E917AF2A5A475B00324937 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84419ACD2C88801600A5817F /* CloudViewModel.swift */,
 				94E917B02A5A475B00324937 /* PhotoSearcher.swift */,
 			);
 			path = ViewModel;
@@ -549,6 +552,7 @@
 				94E917B42A5A475B00324937 /* BPETokenizer+Reading.swift in Sources */,
 				94E917C22A5A475B00324937 /* PhotoCollectionView.swift in Sources */,
 				94E917BA2A5A475B00324937 /* CachedImageManager.swift in Sources */,
+				84419ACE2C88801600A5817F /* CloudViewModel.swift in Sources */,
 				94E917BE2A5A475B00324937 /* BuildIndexView.swift in Sources */,
 				94E917C02A5A475B00324937 /* PhotoView.swift in Sources */,
 				94E917CC2A5A475B00324937 /* PhotoSearcher.swift in Sources */,
@@ -577,7 +581,7 @@
 				846C33612C85C1CF006894FC /* MainView.swift in Sources */,
 				94E917C82A5A475B00324937 /* SearchResultsView.swift in Sources */,
 				846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */,
-				846C33632C85EC60006894FC /* CloudTextModel.swift in Sources */,
+				846C33632C85EC60006894FC /* CloudTextHelper.swift in Sources */,
 				94E917C42A5A475B00324937 /* PhotoViewForMac.swift in Sources */,
 				94E917B32A5A475B00324937 /* BPETokenizer.swift in Sources */,
 				849E57B92C85BCFF00D35A9D /* RotationState.swift in Sources */,
