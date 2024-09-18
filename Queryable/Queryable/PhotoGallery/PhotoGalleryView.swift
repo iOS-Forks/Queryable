@@ -75,6 +75,9 @@ struct PhotoGalleryView: View {
                 viewModel.hidePayAlert()
             }))
         }
+        .alert(isPresented: $cloudViewModel.showCloudSpecies) {
+            Alert(title: Text("云种"), message: Text(cloudViewModel.cloudSpecies))
+        }
         .fullScreenCover(isPresented: $payViewModel.isShowPayUI) {
             PayUI(payModel: payViewModel).onDisappear {
                 self.viewModel.isLinkActive = !viewModel.isLimit()
