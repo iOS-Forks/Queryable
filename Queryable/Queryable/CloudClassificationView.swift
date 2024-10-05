@@ -18,7 +18,7 @@ struct CloudClassificationView: View {
                     .scaledToFit()
                     .frame(height: 300)
                 
-                Text("云的种类: \(viewModel.cloudSpecies)")
+                Text("云的种类: \(viewModel.cloudName)")
                     .padding()
                 
                 Button("开始分类") {

@@ -9,12 +9,11 @@ import CoreML
 import Vision
 import UIKit
 
-class ImageClassifier {
+class CloudImageClassifier {
     
+    private let model = try! best(configuration: .init()).model
 
     func classifyImage(_ inputImage: UIImage) -> String? {
-        
-        let model = try! best(configuration: .init()).model
         
         // 将 UIImage 转换为 Core ML 需要的输入格式 (400x400)
         guard let buffer = inputImage.resize(to: CGSize(width: 400, height: 400))?.toCVPixelBuffer() else {

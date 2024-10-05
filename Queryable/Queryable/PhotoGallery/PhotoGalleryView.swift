@@ -44,7 +44,7 @@ struct PhotoGalleryView: View {
                                     return
                                 }
                                 
-                                let result = ImageClassifier().classifyImage(image)
+                                let result = CloudImageClassifier().classifyImage(image)
                                 print("============================================= \(result)")
                                 cloudViewModel.checkCloudSpecie(image: image)
                             } label: {
@@ -78,7 +78,7 @@ struct PhotoGalleryView: View {
             }))
         }
         .alert(isPresented: $cloudViewModel.showCloudSpecies) {
-            Alert(title: Text("云种"), message: Text(cloudViewModel.cloudSpecies))
+            Alert(title: Text("云种"), message: Text(cloudViewModel.cloudName))
         }
         .fullScreenCover(isPresented: $payViewModel.isShowPayUI) {
             PayUI(payModel: payViewModel).onDisappear {

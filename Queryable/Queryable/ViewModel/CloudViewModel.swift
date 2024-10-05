@@ -10,14 +10,14 @@ import UIKit
 
 class CloudViewModel : ObservableObject {
     
-    @Published var cloudSpecies: String = ""
+    @Published var cloudName: String = ""
     @Published var showCloudSpecies: Bool = false
     
     @Published var imagePickFromGallery: UIImage? = nil
     
     private func updateCloudSpecies(_ newValue: String) {
         DispatchQueue.main.async {
-            self.cloudSpecies = newValue
+            self.cloudName = newValue
         }
     }
     
