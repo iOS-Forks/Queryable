@@ -31,6 +31,10 @@ class CloudImageClassifier {
             // 获取输出
             let prediction = try model.prediction(from: input)
             
+            let prob = prediction.featureValue(for: "classLabel_probs")
+            
+            print("--->> \(prob)")
+            
             // 输出的分类标签
             if let outputLabel = prediction.featureValue(for: "classLabel")?.stringValue {
                 return outputLabel

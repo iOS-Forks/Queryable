@@ -45,33 +45,29 @@ class CloudViewModel : ObservableObject {
     func checkCloudSpecie(image: UIImage) {
         Task {
             
-            let result = CloudImageClassifier.shared.classifyImage(image)
-            print("CloudViewModel --->> 云识别结果：\(result)")
-            self.updateCloudSpecies(result)
-            
-//            do {
-//                guard let cropImage = image.cropImageForCLIP() else {
-//                    print("调整图像大小失败")
-//                    self.updateCloudSpecies("没有云")
-//                    return
-//                }
-//                
-//                guard let resizedImage = try cropImage.resizeImageTo(size: CGSize(width: 256, height: 256)) else {
-//                    print("调整图像大小失败")
-//                    self.updateCloudSpecies("没有云")
-//                    return
-//                }
-//                guard let embedding = await imgEncoder.computeImgEmbedding(img: resizedImage) else {
-//                    print("无法计算图像嵌入")
-//                    self.updateCloudSpecies("没有云")
-//                    return
-//                }
-//                print("图像嵌入: \(embedding)")
-//                
-//                let hasCloudInPic = await cloudTextModel.hasCloud(in: embedding)
-//                
-//                if hasCloudInPic {
-//                    
+            do {
+                guard let cropImage = image.cropImageForCLIP() else {
+                    print("调整图像大小失败")
+                    self.updateCloudSpecies("没有云")
+                    return
+                }
+                
+                guard let resizedImage = try cropImage.resizeImageTo(size: CGSize(width: 256, height: 256)) else {
+                    print("调整图像大小失败")
+                    self.updateCloudSpecies("没有云")
+                    return
+                }
+                guard let embedding = await imgEncoder.computeImgEmbedding(img: resizedImage) else {
+                    print("无法计算图像嵌入")
+                    self.updateCloudSpecies("没有云")
+                    return
+                }
+                print("图像嵌入: \(embedding)")
+                
+                let hasCloudInPic = await cloudTextModel.hasCloud(in: embedding)
+                
+                if hasCloudInPic {
+                    
 //                    guard let closestLabel = await cloudTextModel.findClosestCloudLabel(for: embedding) else {
 //                        print("未找到匹配的标签")
 //                        self.updateCloudSpecies("没有云")
@@ -79,18 +75,22 @@ class CloudViewModel : ObservableObject {
 //                    }
 //                    print("最接近的云标签: \(closestLabel)")
 //                    self.updateCloudSpecies(closestLabel)
-//                    
-//                } else {
-//                    print("未找到匹配的标签")
-//                    self.updateCloudSpecies("没有云")
-//                }
-//                
-//                print("图片中有云: \(hasCloudInPic)")
-//            } catch {
-//                print("编码图像时出错: \(error)")
-//                print("未找到匹配的标签")
-//                self.updateCloudSpecies("没有云")
-//            }
+                    
+                    let result = CloudImageClassifier.shared.classifyImage(image)
+                    print("CloudViewModel --->> 云识别结果：\(result)")
+                    self.updateCloudSpecies(result)
+                    
+                } else {
+                    print("未找到匹配的标签")
+                    self.updateCloudSpecies("没有云")
+                }
+                
+                print("图片中有云: \(hasCloudInPic)")
+            } catch {
+                print("编码图像时出错: \(error)")
+                print("未找到匹配的标签")
+                self.updateCloudSpecies("没有云")
+            }
             self.updateShowCloudSpecies(true)
         }
     }
