@@ -815,6 +815,7 @@
 				DEVELOPMENT_TEAM = RH9H7T7RBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "拍云";
 				INFOPLIST_KEY_NSCameraUsageDescription = "拍照后识别云";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to all your photos for offline search.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -847,6 +848,7 @@
 				DEVELOPMENT_TEAM = RH9H7T7RBU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "拍云";
 				INFOPLIST_KEY_NSCameraUsageDescription = "拍照后识别云";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Allow access to all your photos for offline search.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
