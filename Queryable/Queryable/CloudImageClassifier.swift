@@ -8,6 +8,7 @@
 import CoreML
 import Vision
 import UIKit
+import CommonLibs
 
 class CloudImageClassifier {
     

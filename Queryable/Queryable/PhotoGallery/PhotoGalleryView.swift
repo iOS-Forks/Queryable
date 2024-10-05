@@ -77,7 +77,7 @@ struct PhotoGalleryView: View {
             }))
         }
         .alert(isPresented: $cloudViewModel.showCloudSpecies) {
-            Alert(title: Text("云种"), message: Text(cloudViewModel.cloudName))
+            Alert(title: Text("云种"), message: Text(cloudViewModel.cloud?.cloudName ?? ""))
         }
         .fullScreenCover(isPresented: $payViewModel.isShowPayUI) {
             PayUI(payModel: payViewModel).onDisappear {

@@ -19,6 +19,7 @@ struct QueryableApp: App {
 //            PhotoGalleryView()
 //                .environmentObject(rotationState)
             PickImageEntryView()
+                .environmentObject(rotationState)
         }
     }
 }

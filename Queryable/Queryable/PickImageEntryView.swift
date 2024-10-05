@@ -37,7 +37,7 @@ struct PickImageEntryView: View {
                         .cornerRadius(10)
                 }
                 
-                if let image = viewModel.imagePickFromGallery {
+                if let image = viewModel.selectedImage {
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()
@@ -45,17 +45,21 @@ struct PickImageEntryView: View {
                 }
             }
             .sheet(isPresented: $isImagePickerPresented) {
-                ImagePicker(image: $viewModel.imagePickFromGallery, onImagePicked: {
+                ImagePicker(image: $viewModel.selectedImage, onImagePicked: {
                     showClassificationView = true
                 })
             }
             .fullScreenCover(isPresented: $isCameraPresented) {
-                CameraPicker(image: $viewModel.imagePickFromGallery, onImagePicked: {
+                CameraPicker(image: $viewModel.selectedImage, onImagePicked: {
                     showClassificationView = true
                 })
             }
             .background(
-                NavigationLink(destination: CloudClassificationView(), isActive: $showClassificationView) {
+//                NavigationLink(destination: CloudClassificationView(), isActive: $showClassificationView) {
+//                    EmptyView()
+//                }
+                
+                NavigationLink(destination: CloudResultView(), isActive: $showClassificationView) {
                     EmptyView()
                 }
             )

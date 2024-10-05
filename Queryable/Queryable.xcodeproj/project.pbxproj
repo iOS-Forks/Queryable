@@ -11,7 +11,8 @@
 		840E28D22CB10F2400F71D93 /* CloudImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28D12CB10F2400F71D93 /* CloudImageClassifier.swift */; };
 		840E28D42CB1124700F71D93 /* best.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 840E28D32CB1124700F71D93 /* best.mlpackage */; };
 		840E28E02CB125B000F71D93 /* PickImageEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */; };
-		840E28E22CB167E100F71D93 /* CloudClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28E12CB167E100F71D93 /* CloudClassificationView.swift */; };
+		840E28E42CB17EAA00F71D93 /* CloudResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28E32CB17EAA00F71D93 /* CloudResultView.swift */; };
+		840E28E62CB1822E00F71D93 /* clouds.json in Resources */ = {isa = PBXBuildFile; fileRef = 840E28E52CB1822E00F71D93 /* clouds.json */; };
 		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
 		84419ACE2C88801600A5817F /* CloudViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84419ACD2C88801600A5817F /* CloudViewModel.swift */; };
 		846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334C2C85C0C4006894FC /* PayManager+Poem.swift */; };
@@ -93,7 +94,8 @@
 		840E28D12CB10F2400F71D93 /* CloudImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudImageClassifier.swift; sourceTree = "<group>"; };
 		840E28D32CB1124700F71D93 /* best.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = best.mlpackage; sourceTree = "<group>"; };
 		840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageEntryView.swift; sourceTree = "<group>"; };
-		840E28E12CB167E100F71D93 /* CloudClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudClassificationView.swift; sourceTree = "<group>"; };
+		840E28E32CB17EAA00F71D93 /* CloudResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudResultView.swift; sourceTree = "<group>"; };
+		840E28E52CB1822E00F71D93 /* clouds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = clouds.json; sourceTree = "<group>"; };
 		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
 		84419ACD2C88801600A5817F /* CloudViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewModel.swift; sourceTree = "<group>"; };
 		846C334C2C85C0C4006894FC /* PayManager+Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayManager+Poem.swift"; sourceTree = "<group>"; };
@@ -258,7 +260,7 @@
 				94E917502A5A45C200324937 /* Preview Content */,
 				840E28D12CB10F2400F71D93 /* CloudImageClassifier.swift */,
 				840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */,
-				840E28E12CB167E100F71D93 /* CloudClassificationView.swift */,
+				840E28E52CB1822E00F71D93 /* clouds.json */,
 			);
 			path = Queryable;
 			sourceTree = "<group>";
@@ -317,6 +319,7 @@
 		94E9179D2A5A475B00324937 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				840E28E32CB17EAA00F71D93 /* CloudResultView.swift */,
 				94E9179E2A5A475B00324937 /* BuildIndexView.swift */,
 				94E9179F2A5A475B00324937 /* PhotoResult */,
 				94E917A42A5A475B00324937 /* ViewForMac */,
@@ -530,6 +533,7 @@
 				846C335A2C85C0C4006894FC /* pay_productids.json in Resources */,
 				94E917DE2A5A47A300324937 /* Localizable.strings in Resources */,
 				94E917DF2A5A47A300324937 /* Localizable.strings in Resources */,
+				840E28E62CB1822E00F71D93 /* clouds.json in Resources */,
 				4D3B1D642A5F95300004C06F /* CoreMLModels in Resources */,
 				94E917522A5A45C200324937 /* Preview Assets.xcassets in Resources */,
 				94E917E02A5A47A300324937 /* Localizable.strings in Resources */,
@@ -562,6 +566,7 @@
 			files = (
 				846C33592C85C0C4006894FC /* ProductIds.swift in Sources */,
 				94E917B42A5A475B00324937 /* BPETokenizer+Reading.swift in Sources */,
+				840E28E42CB17EAA00F71D93 /* CloudResultView.swift in Sources */,
 				94E917C22A5A475B00324937 /* PhotoCollectionView.swift in Sources */,
 				94E917BA2A5A475B00324937 /* CachedImageManager.swift in Sources */,
 				84419ACE2C88801600A5817F /* CloudViewModel.swift in Sources */,
@@ -574,7 +579,6 @@
 				846C335C2C85C0C4006894FC /* PayProductHelper.swift in Sources */,
 				94E917C72A5A475B00324937 /* SearchBarView.swift in Sources */,
 				94E917BB2A5A475B00324937 /* PhotoCollection.swift in Sources */,
-				840E28E22CB167E100F71D93 /* CloudClassificationView.swift in Sources */,
 				846C335D2C85C0C4006894FC /* PayItemButtonView.swift in Sources */,
 				94E917B72A5A475B00324937 /* PhotoSearchModel.swift in Sources */,
 				846C335F2C85C103006894FC /* CountChecker.swift in Sources */,
