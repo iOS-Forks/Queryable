@@ -11,9 +11,10 @@ import PhotosUI
 struct PickImageEntryView: View {
     @StateObject private var viewModel = CloudViewModel.shared
     @State private var isImagePickerPresented = false
+    @State private var isCameraPresented = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 20) {
             Button(action: {
                 isImagePickerPresented = true
             }) {
@@ -23,8 +24,15 @@ struct PickImageEntryView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            .sheet(isPresented: $isImagePickerPresented) {
-                ImagePicker(image: $viewModel.imagePickFromGallery)
+            
+            Button(action: {
+                isCameraPresented = true
+            }) {
+                Text("拍照")
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
             
             if let image = viewModel.imagePickFromGallery {
@@ -33,6 +41,19 @@ struct PickImageEntryView: View {
                     .scaledToFit()
                     .frame(height: 200)
             }
+            
+            if let image = viewModel.imagePickFromCamera {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+            }
+        }
+        .sheet(isPresented: $isImagePickerPresented) {
+            ImagePicker(image: $viewModel.imagePickFromGallery)
+        }
+        .fullScreenCover(isPresented: $isCameraPresented) {
+            CameraPicker(image: $viewModel.imagePickFromCamera)
         }
     }
 }
@@ -74,6 +95,57 @@ struct ImagePicker: UIViewControllerRepresentable {
                     }
                 }
             }
+        }
+    }
+}
+
+class PortraitOnlyImagePickerController: UIImagePickerController {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
+    }
+}
+
+struct CameraPicker: UIViewControllerRepresentable {
+    @Binding var image: UIImage?
+    @Environment(\.presentationMode) private var presentationMode
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<CameraPicker>) -> PortraitOnlyImagePickerController {
+        let picker = PortraitOnlyImagePickerController()
+        picker.sourceType = .camera
+        picker.delegate = context.coordinator
+        picker.navigationController?.navigationBar.tintColor = .white
+        picker.cameraDevice = .rear
+        picker.cameraCaptureMode = .photo
+        picker.modalPresentationStyle = .fullScreen
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: PortraitOnlyImagePickerController, context: UIViewControllerRepresentableContext<CameraPicker>) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        let parent: CameraPicker
+        
+        init(_ parent: CameraPicker) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let image = info[.originalImage] as? UIImage {
+                parent.image = image
+            }
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            parent.presentationMode.wrappedValue.dismiss()
         }
     }
 }
