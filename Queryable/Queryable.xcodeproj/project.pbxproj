@@ -11,6 +11,7 @@
 		840E28D22CB10F2400F71D93 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28D12CB10F2400F71D93 /* ImageClassifier.swift */; };
 		840E28D42CB1124700F71D93 /* best.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 840E28D32CB1124700F71D93 /* best.mlpackage */; };
 		840E28E02CB125B000F71D93 /* PickImageEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */; };
+		840E28E22CB167E100F71D93 /* CloudClassificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E28E12CB167E100F71D93 /* CloudClassificationView.swift */; };
 		843B78932C85AB34009E630F /* CLIPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B78922C85AB34009E630F /* CLIPHelper.swift */; };
 		84419ACE2C88801600A5817F /* CloudViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84419ACD2C88801600A5817F /* CloudViewModel.swift */; };
 		846C33552C85C0C4006894FC /* PayManager+Poem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C334C2C85C0C4006894FC /* PayManager+Poem.swift */; };
@@ -92,6 +93,7 @@
 		840E28D12CB10F2400F71D93 /* ImageClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		840E28D32CB1124700F71D93 /* best.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = best.mlpackage; sourceTree = "<group>"; };
 		840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageEntryView.swift; sourceTree = "<group>"; };
+		840E28E12CB167E100F71D93 /* CloudClassificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudClassificationView.swift; sourceTree = "<group>"; };
 		843B78922C85AB34009E630F /* CLIPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLIPHelper.swift; sourceTree = "<group>"; };
 		84419ACD2C88801600A5817F /* CloudViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudViewModel.swift; sourceTree = "<group>"; };
 		846C334C2C85C0C4006894FC /* PayManager+Poem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PayManager+Poem.swift"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				94E917502A5A45C200324937 /* Preview Content */,
 				840E28D12CB10F2400F71D93 /* ImageClassifier.swift */,
 				840E28DF2CB125B000F71D93 /* PickImageEntryView.swift */,
+				840E28E12CB167E100F71D93 /* CloudClassificationView.swift */,
 			);
 			path = Queryable;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				846C335C2C85C0C4006894FC /* PayProductHelper.swift in Sources */,
 				94E917C72A5A475B00324937 /* SearchBarView.swift in Sources */,
 				94E917BB2A5A475B00324937 /* PhotoCollection.swift in Sources */,
+				840E28E22CB167E100F71D93 /* CloudClassificationView.swift in Sources */,
 				846C335D2C85C0C4006894FC /* PayItemButtonView.swift in Sources */,
 				94E917B72A5A475B00324937 /* PhotoSearchModel.swift in Sources */,
 				846C335F2C85C103006894FC /* CountChecker.swift in Sources */,

@@ -12,8 +12,8 @@ class CloudViewModel : ObservableObject {
     
     @Published var cloudSpecies: String = ""
     @Published var showCloudSpecies: Bool = false
+    
     @Published var imagePickFromGallery: UIImage? = nil
-    @Published var imagePickFromCamera: UIImage? = nil
     
     private func updateCloudSpecies(_ newValue: String) {
         DispatchQueue.main.async {
