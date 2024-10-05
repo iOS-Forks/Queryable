@@ -44,8 +44,7 @@ struct PhotoGalleryView: View {
                                     return
                                 }
                                 
-                                let result = CloudImageClassifier().classifyImage(image)
-                                print("============================================= \(result)")
+
                                 cloudViewModel.checkCloudSpecie(image: image)
                             } label: {
                                 imageView(for: asset)

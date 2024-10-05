@@ -11,13 +11,17 @@ import UIKit
 
 class CloudImageClassifier {
     
+    public static let shared = CloudImageClassifier()
+    
+    private init() {}
+    
     private let model = try! best(configuration: .init()).model
 
-    func classifyImage(_ inputImage: UIImage) -> String? {
+    func classifyImage(_ inputImage: UIImage) -> String {
         
         // 将 UIImage 转换为 Core ML 需要的输入格式 (400x400)
         guard let buffer = inputImage.resize(to: CGSize(width: 400, height: 400))?.toCVPixelBuffer() else {
-            return nil
+            return "NONE"
         }
         
         do {
@@ -35,7 +39,7 @@ class CloudImageClassifier {
             print("Failed to make prediction: \(error.localizedDescription)")
         }
         
-        return nil
+        return "NONE"
     }
 }
 
