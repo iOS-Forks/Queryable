@@ -16,8 +16,9 @@ struct QueryableApp: App {
         WindowGroup {
             //ContentView()
             //MainView()
-            PhotoGalleryView()
-                .environmentObject(rotationState)
+//            PhotoGalleryView()
+//                .environmentObject(rotationState)
+            PickImageEntryView()
         }
     }
 }
