@@ -66,10 +66,9 @@ struct CloudResultView: View {
                 self.viewModel.checkCloudSpecie(image: newValue)
             }
         })
-//        .onAppear {
-//            //self.viewModel.loadUIImage(asset: asset)
-//            self.viewModel.checkCloudSpecie(image: newValue)
-//        }
+        .onAppear {
+            self.viewModel.checkCloudSpecie(image: self.viewModel.selectedImage)
+        }
         .onAppear {
             self.rotationState.isRotated = UIDevice.current.orientation.isLandscape
             NotificationCenter.default.addObserver(forName: UIDevice.orientationDidChangeNotification, object: nil, queue: .main) { _ in
