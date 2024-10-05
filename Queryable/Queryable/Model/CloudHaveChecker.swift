@@ -29,7 +29,11 @@ class CloudHaveChecker {
         "clouds", 
         "sky",
         "fog",
-        "mist"
+        "mist",
+        "rain",
+        "snow",
+        "sun",
+        "moon"
     ]
 
     func isHaveCloud(in embedding: MLShapedArray<Float32>) async -> Bool {
