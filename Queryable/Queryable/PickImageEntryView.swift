@@ -18,7 +18,7 @@ struct PickImageEntryView: View {
             Button(action: {
                 isImagePickerPresented = true
             }) {
-                Text("从照片中选择图片")
+                Text("相册")
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
@@ -117,7 +117,7 @@ struct CameraPicker: UIViewControllerRepresentable {
         let picker = PortraitOnlyImagePickerController()
         picker.sourceType = .camera
         picker.delegate = context.coordinator
-        picker.navigationController?.navigationBar.tintColor = .white
+        picker.navigationController?.navigationBar.tintColor = .black
         picker.cameraDevice = .rear
         picker.cameraCaptureMode = .photo
         picker.modalPresentationStyle = .fullScreen
