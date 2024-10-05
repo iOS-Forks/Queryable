@@ -8,8 +8,8 @@
 import Foundation
 import CoreML
 
-class CloudTextHelper {
-    static let shared = CloudTextHelper()
+class CloudHaveChecker {
+    static let shared = CloudHaveChecker()
 
     private var encodedLabels: [MLShapedArray<Float32>] = []
     private var cloud_encodeds_encoded: [MLShapedArray<Float32>] = []
@@ -32,7 +32,7 @@ class CloudTextHelper {
         "mist"
     ]
 
-    func hasCloud(in embedding: MLShapedArray<Float32>) async -> Bool {
+    func isHaveCloud(in embedding: MLShapedArray<Float32>) async -> Bool {
         for cloudEmbedding in cloud_encodeds_encoded {
             let similarity = await CLIPHelper.shared.cosine_similarity(A: embedding, B: cloudEmbedding)
             print("CloudTextHelper --->> similarity: \(similarity)")

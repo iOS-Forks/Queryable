@@ -30,12 +30,12 @@ class CloudViewModel : ObservableObject {
     static let shared = CloudViewModel()
     
     private let imgEncoder: ImgEncoder
-    private let cloudTextModel: CloudTextHelper
+    private let cloudTextModel: CloudHaveChecker
     
     private init() {
         do {
             self.imgEncoder = try ImgEncoder()
-            self.cloudTextModel = CloudTextHelper.shared
+            self.cloudTextModel = CloudHaveChecker.shared
         } catch {
             fatalError("初始化ImgEncoder失败: \(error)")
         }
@@ -64,7 +64,7 @@ class CloudViewModel : ObservableObject {
                 }
                 print("图像嵌入: \(embedding)")
                 
-                let hasCloudInPic = await cloudTextModel.hasCloud(in: embedding)
+                let hasCloudInPic = await cloudTextModel.isHaveCloud(in: embedding)
                 
                 if hasCloudInPic {
                     
